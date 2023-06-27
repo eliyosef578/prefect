@@ -1,0 +1,54 @@
+###
+### A complete description of a Prefect Deployment for flow 'rest'
+###
+name: moshe
+description: null
+version: 3a6c483a29d5d37cf8f5b9e9f665f8f9
+# The work queue that will handle this deployment's runs
+work_queue_name: url
+work_pool_name: URL
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: rest
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 3165969a-cbd6-431b-a9ba-c1401295928b
+  _block_document_name: anonymous-95dc64e7-f534-46fb-824a-4514db790e90
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  basepath: s3://minio-s3
+  settings:
+    key: MINIO
+    secret: MINIO12345
+    client_kwargs:
+      endpoint_url: http://minio:9000
+  _block_document_id: f8f8ab77-2691-4332-8b69-5d3a9235f58c
+  _block_document_name: minio
+  _is_anonymous: false
+  block_type_slug: remote-file-system
+  _block_type_slug: remote-file-system
+path: ''
+entrypoint: rest_flow_3.py:rest
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-04-09T12:35:58.693179+00:00'

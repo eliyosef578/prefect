@@ -1,0 +1,77 @@
+###
+### A complete description of a Prefect Deployment for flow 'gpt'
+###
+name: eli
+description: null
+version: 3e7476b69aeec9e6eb1c09ff37ce2289
+# The work queue that will handle this deployment's runs
+work_queue_name: url
+work_pool_name: URL
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: gpt
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  _block_document_id: 5669d6de-30a5-4df0-9cd4-c0a94ab3919b
+  _block_document_name: anonymous-62aa0a11-6bfb-4c8d-9797-9a44f1f58869
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  basepath: s3://minio-s3
+  settings:
+    key: MINIO
+    secret: MINIO12345
+    client_kwargs:
+      endpoint_url: http://minio:9000
+  _block_document_id: f8f8ab77-2691-4332-8b69-5d3a9235f58c
+  _block_document_name: minio
+  _is_anonymous: false
+  block_type_slug: remote-file-system
+  _block_type_slug: remote-file-system
+path: ''
+entrypoint: gpt.py:gpt
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    websites:
+      title: websites
+      default:
+      - https://www.google.com
+      - https://www.youtube.com
+      - https://www.facebook.com
+      - https://www.baidu.com
+      - https://www.wikipedia.org
+      - https://www.qq.com
+      - https://www.amazon.com
+      - https://www.taobao.com
+      - https://www.twitter.com
+      - https://www.instagram.com
+      - https://www.sohu.com
+      - https://www.reddit.com
+      - https://www.linkedin.com
+      - https://www.yahoo.com
+      - https://www.bing.com
+      - https://www.aliexpress.com
+      - https://www.netflix.com
+      - https://www.microsoft.com
+      - https://www.office.com
+      position: 0
+  required: null
+  definitions: null
+timestamp: '2023-06-25T10:58:22.089149+00:00'

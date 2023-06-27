@@ -1,0 +1,5 @@
+aiohttp
+asyncio
+s3fs
+wikipedia-api
+
